@@ -55,7 +55,7 @@
   <h1>Welcome to my webpage!</h1>
   <p>Enter the URL of the webpage you want to load in the iFrame:</p>
   <form id="iframeForm">
-    <input type="text" id="iframeUrl" name="iframeUrl" value="https://www.google.com">
+    <input type="text" id="iframeUrl" name="iframeUrl" value="about:blank">
     <button type="submit">Load iFrame</button>
   </form>
   <iframe id="iframeContent" width="1350" height="600"></iframe>
@@ -65,9 +65,6 @@
     var iframeForm = document.getElementById("iframeForm");
     var iframeUrlInput = document.getElementById("iframeUrl");
     var iframeContent = document.getElementById("iframeContent");
-
-    // Set the initial iFrame source to the default URL
-    iframeContent.src = iframeUrlInput.value;
 
     // Add a submit event listener to the form
     iframeForm.addEventListener("submit", function(event) {
